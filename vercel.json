@@ -1,8 +1,9 @@
 {
-  "build": {
-    "env": {
-      "NPM_FLAGS": "--no-frozen-lockfile",
-      "CI": "false"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
     }
-  }
+  ],
+  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm run build"
 }
